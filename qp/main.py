@@ -6,7 +6,7 @@ def entry(self):
     while True:
         schedule.run_pending()
 
-def prediction():
+def prediction(self):
     print("hello world")
 
 def start():
