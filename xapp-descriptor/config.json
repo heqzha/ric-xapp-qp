@@ -1,0 +1,49 @@
+{
+    "xapp_name": "qp",
+    "version": "0.0.1",
+    "containers": [
+        {
+            "name": "qp",
+            "image": {
+                "registry": "docker.io",
+                "name": "heqzha/qp",
+                "tag": "v0.0.1"
+            }
+        }
+    ],
+    "messaging": {
+        "ports": [
+            {
+                "name": "rmr-data",
+                "container": "qp",
+                "port": 4560,
+                "txMessages": [
+                    "QP_UPDATE"
+                ],
+                "rxMessages": [
+                    "QP_ACK"
+                ],
+                "policies": [],
+                "description": "rmr receive data port for qp"
+            },
+            {
+                "name": "rmr-route",
+                "container": "qp",
+                "port": 4561,
+                "description": "rmr route port for qp"
+            }
+        ]
+    },
+    "rmr": {
+        "protPort": "tcp:4560",
+        "maxSize": 2072,
+        "numWorkers": 1,
+        "rxMessages": [
+            "QP_ACK"
+        ],
+        "txMessages": [
+            "QP_UPDATE"
+        ],
+        "policies": []
+    }
+}
