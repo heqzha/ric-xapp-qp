@@ -25,7 +25,7 @@ ENV LD_LIBRARY_PATH /usr/local/lib/:/usr/local/lib64
 COPY local.rt /opt/route/local.rt
 ENV RMR_SEED_RT /opt/route/local.rt
 
-RUN apk update && apk add gcc musl-dev
+RUN apk update && apk add gcc musl-dev bash
 RUN pip install ricxappframe
 RUN conda update -n base -c defaults conda
 # RUN conda install pandas
