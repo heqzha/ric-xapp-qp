@@ -12,11 +12,12 @@ def prediction(self):
     print("hello world")
     global cnt
     if cnt%10==0:
+        print(sdl.sdl_get_ue_pos_idx_list(sdl.NS_UE1))
         print(sdl.sdl_get_ue_pos_list(sdl.NS_UE1))
-        print(sdl.sdl_get_ue_pos_list(sdl.NS_UE2))
+        # print(sdl.sdl_get_ue_pos_idx_list(sdl.NS_UE2))
     else:
         sdl.sdl_set_ue(sdl.NS_UE1)
-        sdl.sdl_set_ue(sdl.NS_UE2)
+        # sdl.sdl_set_ue(sdl.NS_UE2)
     cnt+=1
 
 def start():

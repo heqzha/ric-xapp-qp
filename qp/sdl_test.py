@@ -14,5 +14,8 @@ def get_now_in_sec():
 def sdl_set_ue(ns_ue):
     sdl.set(ns_ue, PREFIX_POS+str(get_now_in_sec()), random.random())
 
-def sdl_get_ue_pos_list(ns_ue):
+def sdl_get_ue_pos_idx_list(ns_ue):
     return sdl.find_keys(ns_ue, PREFIX_POS)
+
+def sdl_get_ue_pos_list(ns_ue):
+    return sdl.find_and_get(ns_ue, PREFIX_POS)
