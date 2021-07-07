@@ -13,7 +13,10 @@ def prediction(self):
     global cnt
     if cnt%10==0:
         print(sdl.sdl_get_ue_pos_idx_list(sdl.NS_UE1))
-        print(sdl.sdl_get_ue_pos_list(sdl.NS_UE1))
+        ue_pos=sdl.sdl_get_ue_pos_list(sdl.NS_UE1)
+        print(ue_pos)
+        for key, value in ue_pos.items():
+            print([key,value])
         # print(sdl.sdl_get_ue_pos_idx_list(sdl.NS_UE2))
     else:
         sdl.sdl_set_ue(sdl.NS_UE1)
