@@ -18,7 +18,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="qp",
-    version="0.0.4",
+    version="0.0.5",
     packages=find_packages(exclude=["tests.*", "tests"]),
     description="QoE prediction xApp that integrates with Traffic Steering",
     url="https://github.com/heqzha/ric-xapp-qp",
